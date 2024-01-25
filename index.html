@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+
+    <header class="header">
+        <div class="header-logo">
+            <img src="img/logo-wit.png" alt="logo" height="40px">
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li> 
+                <li><a href="#professional-skills">Professional skills</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+       
+            <div class="blurry-spot"></div>
+            <div class="blurry-spot2"></div>
+        </div>
+        <div class="hero-heading">
+            <h1>Mijn Portfolio</h1>
+            <h3>Daniël Tukker</h3>
+        </div>
+    <a class="scroll-link" href="#projects"><div class="scroll-downs">
+        <div class="mousey">
+            <div class="scroller">
+
+            </div>
+        </div>
+    </a>    
+    </section>
+    
+    <section class="projects" id="projects">
+        
+        <div class="blurry-spot3"></div>
+
+        <div class="projects-heading">
+            <h2>Mijn Projecten</h2>
+        </div>
+        <div class="projects-content">
+            <div class="project-img">
+                    <img src="img/sunny-preview.png" alt="sunny" height="auto" width="800px">
+                    <img src="img/m3t-preview (1).png" alt="m3t" height="auto" width="800px">
+            </div>   
+    </section>
+
+    <section class="professional-skills" id="professional-skills">
+        <div class="skills-heading">
+            <h2>Professional Skills</h2>
+        </div>
+        <div class="skills">
+            <a href="pva.html"><img src="img/pva.jpg" alt="pva" height="250px" width="250px"></a>
+            <a href="reflectie.html"><img src="img/reflectie.jpeg" alt="reflectie" height="250px" width="250px"></a>
+            <a href="edumundo.html"><img src="img/edumundo.jpeg" alt="edumundo" height="auto" width="250px"></a>
+        </div>
+        <div class="skills">
+            <a href="presenteren.html"><img src="img/presenteren.jpg" alt="presenteren" height="250px" width="250px"></a>
+            <a href="feedback.html"><img src="img/feedback.jpg" alt="feedback" height="250px" width="250px"></a>
+            <a href="#"><img src="img/vergadering.jpg" alt="vergaderen" height="auto" width="250px"></a>
+        </div>
+    </section>
+    
+      <script>
+        let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+function setActiveLink() {
+  let scrollY = window.scrollY;
+
+  sections.forEach(sec => {
+    let top = sec.offsetTop;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+
+    if (scrollY >= top && scrollY < top + height) {
+      navLinks.forEach(links => {
+        links.classList.remove('active');
+      });
+
+      document.querySelector('header nav a[href="#' + id + '"]').classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', setActiveLink);
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+            const heroSection = document.getElementById("professional-skills");
+            if(heroSection) {
+                heroSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+      </script>
+</body>
+</html>
