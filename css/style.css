@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.active{
+    text-decoration: underline !important;
+    text-underline-offset: 8px;
+    text-decoration-color: white;
+}
+
+.hero {
+
+    background-color: black;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+
+  .blurry-spot {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 330px;
+    border-radius: 50%; 
+    background-color: #5FADE4; 
+    filter: blur(220px);
+  }
+
+  .blurry-spot2 {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    border-radius: 50%; 
+    background-color: #5FADE4; 
+    filter: blur(220px);
+  }
+
+  .header{
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+ 
+.header-logo, nav {
+    padding: 30px;
+    
+}
+
+nav ul li a{
+    margin: 0px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+
+
+.hero-heading{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-heading h1{
+    font-size: 120px;
+    margin-bottom: 0;
+}
+
+.hero-heading h3{
+    font-size: 30px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-link{
+    cursor: pointer;
+    
+}
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-bottom: 20px;
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+.projects{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-heading{
+    width: 100%;
+    height: 25vh;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 32px;
+}
+
+.projects-content{
+    width: 100%;
+    height: 75vh;
+}
+
+.port-img-content {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.project-img {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 600px; 
+}
+
+.blurry-spot3{
+    position: absolute;
+    top: 200%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 330px;
+    border-radius: 50%; 
+    background-color: #5FADE4; 
+    filter: blur(220px);
+  }
+
+
+.professional-skills{
+    height: 100vh;
+    background-color: black;
+    z-index: 1;
+    
+}
+
+.skills-heading{
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 32px;
+}
+
+.skills{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 20px 0;
+}
+
+.skills a{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.skills a:hover{
+    transform: scale(1.1);
+}
+
+.skills a img{
+    border-radius: 20px;
+}
+
