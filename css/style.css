@@ -9,6 +9,11 @@ html{
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: "Main";
+    src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+  }
+
 .active{
     text-decoration: underline !important;
     text-underline-offset: 8px;
@@ -91,8 +96,9 @@ nav ul{
 }
 
 .hero-heading h1{
-    font-size: 120px;
+    font-size: 180px;
     margin-bottom: 0;
+    font-family: "Main";
 }
 
 .hero-heading h3{
@@ -142,7 +148,7 @@ nav ul{
 }
 
 .projects{
-    height: 100vh;
+    height: fit-content;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -161,7 +167,7 @@ nav ul{
 
 .projects-content{
     width: 100%;
-    height: 75vh;
+    height: fit-content;
 }
 
 .port-img-content {
@@ -201,7 +207,7 @@ nav ul{
 .professional-skills{
     height: 100vh;
     background-color: black;
-    z-index: 1;
+    
     
 }
 
