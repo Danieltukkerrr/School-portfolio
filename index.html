@@ -3,64 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-   
-
-    <header class="header">
-        <div class="header-logo">
-            <img src="img/logo-wit.png" alt="logo" height="40px">
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#projects">Projects</a></li> 
-                <li><a href="#professional-skills">Professional skills</a></li>
-                
-            </ul>
-        </nav>
-    </header>
-    <section class="hero" id="hero">
-       
-            <div class="blurry-spot"></div>
-            <div class="blurry-spot2"></div>
-        </div>
-        <div class="hero-heading">
-            <h1>Mijn Portfolio</h1>
-            <h3>Daniël Tukker</h3>
-        </div>
-    <a class="scroll-link" href="#projects"><div class="scroll-downs">
-        <div class="mousey">
-            <div class="scroller">
-
+    <section class="hero">
+        <div class="intro">
+            <div class="overlay"></div>
+            <header>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#werk">Werk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="about.html">Over mij</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </header>
+            <div class="hero-heading">
+                <h1 class="page-titel">
+                    Daniël Tukker
+                </h1>
+                <h3>
+                    Portfolio studiejaar 1
+                </h3>
             </div>
         </div>
-    </a>    
-    </section>
-    
-    <section class="projects" id="projects">
-        
-        <div class="blurry-spot3"></div>
-
-        <div class="projects-heading">
-            <h2>Mijn Projecten</h2>
+        <div class="scroll-section">
+            <p id="section10" class="scrollbutton"> <a href="#werk"><span></span></a></p>
         </div>
-        <div class="projects-content">
-            <div class="project-img">
-                    <a href="sunny.html" class="project-link"><img src="img/sunny-preview.png" alt="sunny" height="auto" width="700px"></a>
-                    <a href="m3t.html" class="project-link"><img src="img/m3t-preview (1).png" alt="m3t" height="auto" width="700px"></a>
-            </div>  
-            <div class="project-img">
-                <a href="sunny.html" class="project-link"><img src="img/sunny-preview.png" alt="sunny" height="auto" width="700px"></a>
-                <a href="m3t.html" class="project-link"><img src="img/m3t-preview (1).png" alt="m3t" height="auto" width="700px"></a>
-        </div>   
     </section>
+    <section class="werk" id="werk">
+            <div class="werk-titel">
+                <div class="werk-titel-links"> 
+                    <h1>Mijn Werk</h1>
+                </div>
+                <div class="werk-titel-rechts">
+                    <p>
+                        Ontdek mijn wereld van onder andere webdesign, webontwikkeling en app-design. Hier vind je een verzameling van mijn beste creaties, van strakke website-ontwerpen tot intuïtieve app-interfaces.
+                    </p>
+                </div>
+            </div>
+            <div class="werk-content">
+                <div class="werk-row">
+                    <div class="project">
+                        <div class="project-img-sunny">
 
+                        </div>
+                        <div class="project-specificaties">
+                            <div class="project-content">
+                                <div class="project-titel">
+                                    <h1>Sunny</h1>
+                                </div>
+                                <div class="project-description">
+                                    <h2>Website voor duurzame sokken</h2>
+                                </div>
+                            </div>
+                            <div class="project-content2">
+                                <h2>HTML/CSS</h2>
+                                <h2>Figma</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-m3t">
+
+                        </div>
+                        <div class="project-specificaties">
+                            <div class="project-content">
+                                <div class="project-titel">
+                                    <h1>M3T</h1>
+                                </div>
+                                <div class="project-description">
+                                    <h2>Database Application Managment</h2>
+                                </div>
+                            </div>
+                            <div class="project-content2">
+                                <h2>phpMyAdmin</h2>
+                                <h2>Proxmox</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="werk-row">
+                    <div class="project">
+                        <div class="project-img-battlebot">
+
+                        </div>
+                        <div class="project-specificaties">
+                            <div class="project-content">
+                                <div class="project-titel">
+                                    <h1>Battlebot</h1>
+                                </div>
+                                <div class="project-description">
+                                    <h2>Robot programeren</h2>
+                                </div>
+                            </div>
+                            <div class="project-content2">
+                                <h2>Arduino</h2>
+                                <h2>C</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project-img-fishsee">
+
+                        </div>
+                        <div class="project-specificaties">
+                            <div class="project-content">
+                                <div class="project-titel">
+                                    <h1>Fishsee</h1>
+                                </div>
+                                <div class="project-description">
+                                    <h2>App design en realisatie</h2>
+                                </div>
+                            </div>
+                            <div class="project-content2">
+                                <h2>Figma</h2>
+                                <h2>React Native</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        
+    </section>
     <section class="professional-skills" id="professional-skills">
         <div class="skills-heading">
             <h2>Professional Skills</h2>
+            <h3>Semester 1</h3>
         </div>
         <div class="skills">
             <a href="pva.html"><img src="img/pva.jpg" alt="pva" height="250px" width="250px"></a>
@@ -72,31 +160,25 @@
             <a href="feedback.html"><img src="img/feedback.jpg" alt="feedback" height="250px" width="250px"></a>
             <a href="vergader.html"><img src="img/vergadering.jpg" alt="vergaderen" height="auto" width="250px"></a>
         </div>
+        <div class="skills-heading">
+            <h3>Semester 2</h3>
+        </div>
+        <div class="skills">
+            <a href="pva.html"><img src="img/pva.jpg" alt="pva" height="250px" width="250px"></a>
+            <a href="reflectie2.html"><img src="img/reflectie.jpeg" alt="reflectie" height="250px" width="250px"></a>
+            <a href="edumundo.html"><img src="img/edumundo.jpeg" alt="edumundo" height="auto" width="250px"></a>
+        </div>
+        
     </section>
+
     
-      <script>
-        let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+    <footer>
+        <h1>
+            2024 © Daniël Tukker. Alle rechten voorbehouden
+        </h1>
 
-function setActiveLink() {
-  let scrollY = window.scrollY;
-
-  sections.forEach(sec => {
-    let top = sec.offsetTop;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-
-    if (scrollY >= top && scrollY < top + height) {
-      navLinks.forEach(links => {
-        links.classList.remove('active');
-      });
-
-      document.querySelector('header nav a[href="#' + id + '"]').classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll', setActiveLink);
-
-    </script>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,213 +1,376 @@
+
+
+
+
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  scroll-behavior: smooth;
+} 
+/* Voeg hier je eigen CSS-regels toe */
 body{
+    background-color: black;
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
-}
-
-html{
-    scroll-behavior: smooth;
+    color: white;
 }
 
 @font-face {
-    font-family: "Main";
-    src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
-  }
-
-.active{
-    text-decoration: underline !important;
-    text-underline-offset: 8px;
-    text-decoration-color: white;
+  font-family: "Main";
+  src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
 }
 
-.hero {
 
+html, body {
     background-color: black;
-    width: 100%;
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-  
 
-
-  .blurry-spot {
+.scrollbutton a {
     position: absolute;
-    top: 30%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 330px;
-    border-radius: 50%; 
-    background-color: #5FADE4; 
-    filter: blur(220px);
-  }
+    bottom: 0px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : normal 400 20px/1 Josefin Sans;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
 
-  .blurry-spot2 {
+#section10 a {
+    padding-top: 60px;
+}
+#section10 a span {
     position: absolute;
-    top: 70%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 300px;
-    border-radius: 50%; 
-    background-color: #5FADE4; 
-    filter: blur(220px);
-  }
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+#section10 a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+    0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb10 {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
-  .header{
-    height: 80px;
-    position: fixed;
-    width: 100%;
+
+
+
+
+.hero{
+    height: 100vh;
+}header{
+    height: 10vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-
- 
-.header-logo, nav {
-    padding: 30px;
+    justify-content: center;
+    background-color: #00000000;
+    z-index: 10;
     
 }
 
-nav ul li a{
-    margin: 0px 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
-nav ul{
+header ul{
     display: flex;
     flex-direction: row;
-    list-style-type: none;
+    gap: 50px;
+    align-items: center;
 }
 
+header ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
 
+header ul li{
+    color: white;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.intro{
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/joshua-sortino-gii7lF4y0WY-unsplash.jpg') ;
+    background-size: cover;
+    background-position: center;
+   
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%; /* Pas dit aan afhankelijk van hoeveel van de afbeelding je wilt vervagen */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  }
 
 .hero-heading{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #fff;
+    height: 80vh;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
+    z-index: 10;
 }
 
 .hero-heading h1{
-    font-size: 180px;
-    margin-bottom: 0;
+    font-size: 190px;
+    text-align: center;
     font-family: "Main";
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 .hero-heading h3{
     font-size: 30px;
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.scroll-link{
-    cursor: pointer;
-    
-}
-.scroll-downs {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  margin-bottom: 20px;
-  width :34px;
-  height: 55px;
-}
-.mousey {
-  width: 3px;
-  padding: 10px 15px;
-  height: 35px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
-}
-.scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-  animation-iteration-count: infinite;
-}
-@keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(15px); opacity: 0;}
-}
-
-.projects{
-    height: fit-content;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-}
-
-.projects-heading{
-    width: 100%;
-    height: 25vh;
-    z-index: 1;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    font-size: 32px;
-}
-
-.projects-content{
-    width: 100%;
-    height: fit-content;
-}
-
-.port-img-content {
-    display: flex;
-    justify-content: center;
-}
-
-
-
-.project-img {
-    margin: 10px;
-    display: flex;
-    justify-content: center;
     text-align: center;
+    font-family: "Main";
+    font-weight: 500;
+    margin-bottom: 0
 }
 
-.image-container {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    width: 600px; 
+
+.werk-titel{
+    height: 25vh;
+    font-family: "Main";
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 80px;
+    margin: 110px 0 30px 0;
+    padding: 0 100px;
 }
 
-.blurry-spot3{
-    position: absolute;
-    top: 200%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-    height: 330px;
-    border-radius: 50%; 
-    background-color: #5FADE4; 
-    filter: blur(220px);
+
+.werk-titel-links{
+  width: 700px;
+
+}
+
+.werk-titel-rechts{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: end;
+  width: fit-content;
+}
+
+.werk-titel-rechts p{
+  font-size: 16px;
+  width: 45%;
+  color: rgba(255, 255, 255, 0.631);
+}
+
+.werk-content{
+  height: fit-content;
+  row-gap: 100px;
+  
+}
+
+.werk-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin: 0 100px;
+}
+
+.project{
+  border-radius: 15px;
+  width: 48%;
+  height: 350px;
+  border: rgb(71, 71, 71) solid 1px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.project-img-sunny{
+  height: 75%;
+  background-image: url('../img/Sunny.png');
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.project-img-battlebot{
+    height: 75%;
+  background-image: url('../img/battlebot.png');
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.project-img-m3t{
+    height: 75%;
+  background-image: url('../img/m3t-mockup.png');
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.project-img-fishsee{
+  height: 75%;
+  background-image: url('../img/fishsee-mockup.png');
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.project-specificaties{
+  height: 25%;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+  background-color: black;
+}
+
+.project-titel{
+  height: 30%;
+  width: 50%;
+  padding-left: 15px;
+}
+
+.project-description{
+  height: 70%;
+  width: 50%;
+  padding-left: 15px;
+}
+
+.project-titel h1{
+  font-size: 22px;
+  margin-bottom: 4px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.project-description h2{
+  font-size: 12px;
+  color: rgb(114, 114, 114);
+  margin-top: 4px;
+}
+
+.project-content{
+  width: 50%;
+  background-color: black;
+  z-index: 11;
+}
+
+.project-content h2{
+  width: 200px;
+}
+
+.project-content2{
+  width: 50%;
+  display: flex;
+  gap: 7px;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+  background-color: black;
+  z-index: 11;
+}
+
+.project-content2 h2{
+  font-size: 10px;
+  border: solid rgba(119, 119, 119, 0.296) 2px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(173, 172, 172);
+}
+
+.project:hover .project-img-fishsee{
+  transform: scale(1.1);
+}
+
+.project:hover .project-img-sunny{
+  transform: scale(1.1);
+}
+
+.project:hover .project-img-battlebot{
+    transform: scale(1.1);
+  }
+
+.project:hover .project-img-m3t{
+    transform: scale(1.1);
   }
 
 
-.professional-skills{
-    height: 100vh;
+
+
+  .professional-skills{
+    height: fit-content;
     background-color: black;
-    
+    z-index: 1;
     
 }
 
@@ -220,6 +383,13 @@ nav ul{
     justify-content: center;
     align-items: end;
     font-size: 32px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.skills-heading h2{
+    margin: 0;
 }
 
 .skills{
@@ -254,11 +424,7 @@ nav ul{
     transform: scale(1.1);  /* Maak de afbeelding 10% groter bij hover */
 }
 
-.project-content{
-    height: 50vh;
-    width: 50%;
-    padding: 80px 100px 0px 0px;
-}
+
 
 .project-terug{
     display: flex;
@@ -278,3 +444,20 @@ nav ul{
     font-weight: 700;
     font-size: 16px;
 }
+
+
+
+
+
+footer{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer h1{
+  font-size: 14px;
+}
+
